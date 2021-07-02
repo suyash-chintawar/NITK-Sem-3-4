@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<header>
+	<title>Tele-shopping</title>
+	<link rel="stylesheet" type="text/css" href="assets/styles/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</header>
+<body onload="startTime()">
+<div id="wrapper">
+	<div id="header" style="text-align: center;"> <h1>Registration Form</h1></div>
+	<div id="content">
+		
+		<form id="signup_form" method="POST" onsubmit="return signup_validation(this)">
+		<div id="container">
+			<label><b>Username :</b></label><br>
+			<input type="text" name="uname" id="username" placeholder="Atleast 6 characters" onchange="validate(this)">
+			<text id="valid_uname"></text><br><br>
+
+			<label><b>Email ID :</b></label><br>
+			<input type="text" name="email" id="email" placeholder="abc123@xyz.com" onchange="validate(this)">
+			<text id="valid_email"></text><br><br>
+
+			<label><b>Gender : </b></label>
+			<input type="radio" name="gender" id="male">
+			<label for="male">Male</label>
+			<input type="radio" name="gender" id="female">
+			<label for="female">Female</label>
+			<input type="radio" name="gender" id="nopref">
+			<label for="nopref">Prefer not to say</label><br><br>
+
+			<label><b>Set Password :</b></label><br>
+			<input type="Password" name="pswd" id="pswd" placeholder="Atleast 6 characters, minimum 1 uppercase,1 lowercase,1 special character,1 number"  onchange="validate(this)">
+			<text id="valid_pswd"></text><br><br>
+
+			<label><b>Confirm Password :</b></label><br>
+			<input type="Password" name="cfmpswd" id="cfmpswd" placeholder="Atleast 6 characters, minimum 1 uppercase,1 lowercase,1 special character,1 number"  onchange="validate(this)">
+			<text id="valid_cfmpswd"></text><br><br>
+
+
+			<label>
+				<input type="checkbox" checked="checked" name="remember"><b> Remember me</b>
+			</label><br><br>
+			<label>
+				<input type="checkbox" checked="checked" name="terms">
+				<b>By clicking on Sign Up, you agree to our <a href="#" style="color:red;">Terms of Service</a> and <a href="#" style="color:red;">Privacy Policy</a>.</b>
+			</label>
+
+			<div id="clearfix">
+			<button type="button" id="cancel_btn">Cancel</button>
+			<button type="submit" id="signup_btn">Sign Up</button>
+			</div>
+		</div>
+		</form>
+		
+	</div>
+	<%- include('partials/footer.ejs') %>
+</div>
+<script type="text/javascript" src="assets/scripts/validation.js"></script>
+</body>
+
+</html>

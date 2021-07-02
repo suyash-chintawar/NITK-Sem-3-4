@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<header>
+	<title>Tele-shopping</title>
+	<link rel="stylesheet" type="text/css" href="assets/styles/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</header>
+<body onload="startTime()">
+<div id="wrapper">
+	<div id="header" style="text-align: center;"> <h1>Login Credentials</h1></div>
+	<div id="content">
+		<form id="login_form" method="POST" onsubmit="return login_validation(this)">
+		<div id="container">
+			<label><b>Username :</b></label><br>
+			<input type="text" name="uname" id="username" placeholder="Username" onchange="validate(this)">
+			<text id="valid_uname"></text><br><br>
+
+			<label><b>Password :</b></label><br>
+			<input type="password" name="pswd" id="password" placeholder="Password" onchange="validate(this)">
+			<text id="valid_pswd"></text><br><br>
+
+			<label>
+				<input type="checkbox" checked="checked" name="remember"> <b>Remember me</b>
+			</label>
+
+			<div id="clearfix">
+			<button type="Submit">Login</button> 
+			</div>
+		</div>
+		</form>
+	</div>
+	<%- include('partials/footer.ejs') %>
+</div>
+<script type="text/javascript" src="assets/scripts/validation.js"></script>
+</body>
+</html>

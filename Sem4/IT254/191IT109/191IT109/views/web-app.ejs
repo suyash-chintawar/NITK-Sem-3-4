@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<header>
+	<title>Tele-shopping</title>
+	<link rel="stylesheet" type="text/css" href="assets/styles/style.css">
+	<style type="text/css">
+		h1
+		{
+			color: white;
+			width: 60%;
+			float: left;
+			text-align: center;
+		}
+		#intro
+		{
+			color: white;
+			padding-top: 15px;
+			width: 60%;
+			text-align: center;
+			vertical-align: middle;
+		}
+		#ytvideo
+		{
+			width: 40%;
+			float: left;
+			padding-top: 15px;
+		}
+		@media screen and (max-width: 775px){
+			h1
+			{
+				width: 100%;
+			}
+			#forms
+			{
+				width: 100%;
+			}
+			#left
+			{
+				color: white;
+				width: 100%;	
+			}
+			#right
+			{
+				border-radius: 10px solid yellow;
+				padding-top: 10px;
+				width: 100%;
+				border-width: 5px;
+				text-align: center;
+				box-shadow: 10px 10px 5px grey;
+			}
+			#articles
+			{
+				text-align: center;
+			}
+			#ytvideo
+			{
+				width: 100%;
+			}
+			#intro
+			{
+				width: 100%;
+			}
+			#below
+			{
+				padding-top: 10px;
+			}
+		}
+	</style>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</header>
+<body onload="startTime();home();">
+<div id="wrapper">
+	<div id="header">
+	 	<h1>Welcome to Tele-shopping!!</h1>
+	 	<div id="forms">
+	 	<a href="login" style="color: white;float: left;margin-right: 5%;"><h3>Login</h3></a> 
+	 	<a href="signup" style="color:white;float: left;margin-right: 5%;"><h3>Sign Up</h3></a>
+	 	<a href="search" style="color:white;float: left;margin-right: 5%;"><h3>Search</h3></a>
+	 	<a href="demo" style="color:white;"><h3>Demo</h3></a>
+	 	</div>
+	</div>
+	<div id="content">
+		<div id="left">
+			<div id="nav">
+				<h2>Navigation Bar</h2>
+				<h3>
+				<ul>
+					<li>New releases</li>
+					<li>Your cart</li>
+					<li>Your Orders</li>
+					<li>Your Account</li>
+					<li>Help</li>
+				</ul>
+				</h3>
+			</div>
+			<div id="articles">
+				<h2>Advertisment</h2>
+				<figure>
+				<img src="assets/images/ad.png" width="95%" height="95%" alt="This is an ad" style="padding-left: 1%;padding-top: 1%;">
+				<figcaption style="text-align: center;">Caption: Advertisment</figcaption>
+				</figure>
+			</div>
+		</div>
+		<div id="right">
+			<div id="above" style="height: 50%;">
+			<div id="ytvideo">
+			<iframe width="90%" height="100%" src="https://www.youtube.com/embed/ia7006AzOUY?autoplay=0&mute=1"></iframe>
+			</div>
+			<div id="intro">
+			<p><h3>Hello there! Now you can relax at your home and shop and have products delivered at your doorstep!
+			All you have to do is 3 simple steps, register, select your product and order! We hope you have a great time shopping!</h3></p>
+			</div>
+			</div>
+			<div id="below" style="height: 50%">
+				<h3>Sample audio clip:</h3><br>
+				<audio controls="">
+				<source src="assets/audio/audioclip.mp3" type="audio/mp3">
+			</div>
+		</div>
+	</div>
+	<%- include('partials/footer.ejs') %>
+</div>
+<script type="text/javascript" src="assets/scripts/validation.js"></script>
+</body>
+</html>

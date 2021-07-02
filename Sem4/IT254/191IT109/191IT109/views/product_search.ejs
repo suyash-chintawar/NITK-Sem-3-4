@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<header>
+	<title>Tele-shopping</title>
+	<link rel="stylesheet" type="text/css" href="assets/styles/style.css">
+	<style type="text/css">
+		#category1,#category2,#category3,#category4
+		{
+			background-color: white;
+			width: 50%;
+			padding: 12px 20px;
+			border-width: 2px;
+			border-style: solid;
+			border-color: black;
+		}
+		option
+		{
+			background-color: white;
+		}
+	</style>
+	<script type="text/javascript">
+		function calculate() {
+			// body...
+			var item1=document.getElementById("category1").value;
+			var item2=document.getElementById("category2").value;
+			var item3=document.getElementById("category3").value;
+			var item4=document.getElementById("category4").value;
+
+			var total=(parseInt(item1)+parseInt(item2)+parseInt(item3)+parseInt(item4)+".00");
+			document.getElementById("estimated").innerHTML=total;
+		}
+	</script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</header>
+<body onload="startTime()">
+<div id="wrapper">
+	<div id="header" style="text-align: center;"> 
+		<h1>Bill Estimate</h1></div>
+	<div id="content">
+		
+		<form id="product_demo_form">
+		<div id="container">
+			 <label for="category1"><b>Item 1 :</b></label><br>
+			 <select id="category1">
+			 	<option disabled selected value="0">Select a category</option>
+			 	<option value="10000">Mobiles,Computers </option>
+			 	<option value="350">Books</option>
+			 	<option value="1750">Clothing Essentials</option>
+			 	<option value="750">Daily essentials</option>
+			 	<option value="2500">Gaming Accessories </option>
+			 	<option value="3000">Sports Accessories</option>
+			 	<option value="5000">Electronics</option>
+			 	<option value="1500">Beauty</option>
+			 	<option value="850">Toys</option>
+			 </select><br><br>
+
+			 <label for="category2"><b>Item 2 :</b></label><br>
+			 <select id="category2">
+			 	<option disabled selected value="0">Select a category</option>
+			 	<option value="10000">Mobiles,Computers </option>
+			 	<option value="350">Books</option>
+			 	<option value="1750">Clothing Essentials</option>
+			 	<option value="750">Daily essentials</option>
+			 	<option value="2500">Gaming Accessories </option>
+			 	<option value="3000">Sports Accessories</option>
+			 	<option value="5000">Electronics</option>
+			 	<option value="1500">Beauty</option>
+			 	<option value="850">Toys</option>
+			 </select><br><br>
+
+			 <label for="category3"><b>Item 3 :</b></label><br>
+			 <select id="category3">
+			 	<option disabled selected value="0">Select a category</option>
+			 	<option value="10000">Mobiles,Computers </option>
+			 	<option value="350">Books</option>
+			 	<option value="1750">Clothing Essentials</option>
+			 	<option value="750">Daily essentials</option>
+			 	<option value="2500">Gaming Accessories </option>
+			 	<option value="3000">Sports Accessories</option>
+			 	<option value="5000">Electronics</option>
+			 	<option value="1500">Beauty</option>
+			 	<option value="850">Toys</option>
+			 </select><br><br>
+
+			 <label for="category4"><b>Item 4 :</b></label><br>
+			 <select id="category4">
+			 	<option disabled selected value="0">Select a category</option>
+			 	<option value="10000">Mobiles,Computers </option>
+			 	<option value="350">Books</option>
+			 	<option value="1750">Clothing Essentials</option>
+			 	<option value="750">Daily essentials</option>
+			 	<option value="2500">Gaming Accessories </option>
+			 	<option value="3000">Sports Accessories</option>
+			 	<option value="5000">Electronics</option>
+			 	<option value="1500">Beauty</option>
+			 	<option value="850">Toys</option>
+			 </select><br><br>
+
+			 <b>Estimated Bill value: Rs. </b>
+			 <b><span id="estimated">0.00</span></b><br><br>
+
+			 <button type="button" id="submit_btn" onclick ="calculate()">Calculate</button>
+		</div>
+		</form>
+	</div>
+	<%- include('partials/footer.ejs') %>
+</div>
+<script type="text/javascript" src="assets/scripts/validation.js"></script>
+</body>
+</html>

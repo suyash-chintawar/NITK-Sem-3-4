@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<header>
+	<title>Tele-shopping</title>
+	<link rel="stylesheet" type="text/css" href="assets/styles/style.css">
+	<style type="text/css">
+		textarea
+		{
+			background-color: white;
+			padding: 12px 20px;
+			border-width: 2px;
+			border-style: solid;
+			border-color: black;
+		}
+		#left
+		{
+			width: 45%;
+			float: left;
+		}
+		#right
+		{
+			width: 50%;
+		}
+
+		label
+		{
+			float: left;
+		}
+		@media screen and (max-width: 775px){
+			#left
+			{
+				width: 100%;
+			}
+			#right
+			{
+				width: 100%;
+			}
+		}
+	</style>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</header>
+<body onload="changeImg();startTime();">
+<div id="wrapper">
+	<div id="header" style="text-align: center;"> 
+		<h1>Product Demo - Apple iPhone 12 Pro</h1></div>
+	<div id="content">
+		<div id="container" style="text-align: center;padding-left: 5%;">
+			<h1>Thank you for contacting us!<br> Your response has been recorded!</h1><br>
+			<h2>The details you have entered are as follows:</h2><br><br>
+			<h2>Name:<br> <%= data.name%></h2><br>
+			<h2>Mobile no.:<br> <%= data.contact%></h2><br>
+			<h2>Address:<br> <%= data.address%></h2><br>
+			<h2>Pincode: <br><%= data.pincode%></h2><br>
+		</div>
+	</div>
+	<%- include('partials/footer.ejs') %>
+</div>
+<script type="text/javascript" src="assets/scripts/validation.js"></script>
+</body>
+</html>

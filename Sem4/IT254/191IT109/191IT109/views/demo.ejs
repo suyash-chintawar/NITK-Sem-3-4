@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<header>
+	<title>Tele-shopping</title>
+	<link rel="stylesheet" type="text/css" href="assets/styles/style.css">
+	<style type="text/css">
+		textarea
+		{
+			background-color: white;
+			padding: 12px 20px;
+			border-width: 2px;
+			border-style: solid;
+			border-color: black;
+		}
+		#left
+		{
+			width: 45%;
+			float: left;
+		}
+		#right
+		{
+			width: 50%;
+		}
+
+		label
+		{
+			float: left;
+		}
+		@media screen and (max-width: 775px){
+			#left
+			{
+				width: 100%;
+			}
+			#right
+			{
+				width: 100%;
+			}
+		}
+	</style>
+	<script type="text/javascript">
+		
+	</script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</header>
+<body onload="changeImg();startTime();">
+<div id="wrapper">
+	<div id="header" style="text-align: center;"> 
+		<h1>Product Demo - Apple iPhone 12 Pro</h1></div>
+	<div id="content">
+		<div id="left"  style="text-align: center;">
+			<figure>
+			<img name="imgslider" width="300px" height="400px" alt="Image Slider">
+			<figcaption> Apple iPhone 12 Pro</figcaption>
+			</figure>
+
+			<div id="ytvideo">
+			<iframe width="80%" height="350" src="https://www.youtube.com/embed/cnXapYkboRQ"></iframe></div>
+			</div>
+
+		<div id="right">
+		<form id="product_demo_form" method="POST" onsubmit="return demo_validation(this)">
+		<div id="container" style="text-align: left;padding-left: 5%;">
+
+			<h2>Order/Demo</h2><br>
+			<p>To order this product online, or to request a delivery for the demo product, fill the form below</p><br><br>	
+			 
+			<label for="name"><b>Name :</b></label><br>
+			<input type="text" name="name" placeholder="Name" onchange="validate(this)">
+			<text id="valid_name"></text><br><br>
+
+			<label><b>Mobile No. :</b></label><br>
+			<input type="text" name="contact" placeholder="Mobile No" onchange="validate(this)">
+			<text id="valid_contact"></text><br><br>
+
+			<label><b>Address :</b></label><br>
+			<textarea id="other_specs" name="address" placeholder="Enter address" rows="5" cols="30"></textarea><br><br>
+
+
+			<label><b>Pincode :</b></label><br>
+			<input type="text" name="pincode" placeholder="Pincode" onchange="validate(this)">
+			<text id="valid_pincode"></text><br><br>
+
+			<label><b>Pay on Delivery :</b> </label><br>
+			<input type="radio" name="cod"> Yes<br>
+			<input type="radio" name="cod"> No<br>
+			<br><br>
+
+			<button type="Submit" id="submit_btn">Submit</button>
+		</div>
+		</form>
+		</div>
+	</div>
+	<%- include('partials/footer.ejs') %>
+</div>
+<script type="text/javascript" src="assets/scripts/validation.js"></script>
+</body>
+</html>
